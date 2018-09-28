@@ -1,7 +1,6 @@
 /**
  * @file m2.h
  * @author Mikael Sundstrom <micke@fabinv.com>
- * @author Mikael Sundstrom <micke@fabinv.com>
  *
  * @copyright Copyright (c) 2018 Fabulous Inventions AB - all rights reserved.
  *
@@ -72,9 +71,10 @@ m2_t *m2_create(const char *id, size_t size);
 void m2_destroy(m2_t *handle);
 
 /**
- * @brief Print memory management report to output stream.
+ * @brief Print memory management report to output buffer.
  *
- * @param stream Output stream.
+ * @param buf Output buffer.
+ * @param size Size of output buffer.
  */
 #	ifdef M2_DEBUG
 #	define m2_report(buf, size) m2_report_debug(__FILE__, __LINE__, buf, size)
